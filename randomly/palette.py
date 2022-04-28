@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import requests
+# Guideline: Every function should have a line of docstring
 
-
-def plot_palette(model):
+def plot_palette(model:str):
     if model not in {"default", "ui"}:
         raise ValueError(f"{model} is not supported.")
 

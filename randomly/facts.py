@@ -3,12 +3,15 @@ from requests.exceptions import RequestException
 
 
 def generate_random_fact(output_format, language):
+# current version only supports Engalish and German
     if language not in {"en", "de"}:
         raise ValueError(f"{language} is not supported.")
 
     if output_format not in {"html", "json", "txt", "md"}:
         raise ValueError(f"{output_format} is not supported.")
 
+
+# post response to determine valid
     response = requests.get(
         f"https://uselessfacts.jsph.pl/random.{output_format}?language={language}"
     )

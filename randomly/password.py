@@ -1,3 +1,4 @@
+from typing import optional
 import random
 import string
 
@@ -15,3 +16,4 @@ def generate_password(chars, punctuation, invalid_chars=None):
     password = "".join(char for char in password_chars)
 
     return password
+
